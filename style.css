@@ -1,0 +1,46 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  font-family: 'Titillium Web', sans-serif;;
+}
+.container{
+  width: 800px;
+  margin: 180px auto;
+
+}
+img{
+  width: 800px;
+}
+p{
+  width: 500px;
+  font-size: 20px;
+  text-align: center;
+  margin: 50px auto;
+}
+p a{
+  font-weight: 700;
+  text-decoration: none;
+  color: red;
+}
+@media screen and (max-width: 600px) {
+  .container{
+    width: 320px;
+    margin: 150px auto;
+  }
+  img{
+    width: 320px;
+  }
+  p{
+    width: 300px;
+    font-size: 16px;
+    text-align: center;
+    margin: 50px auto;
+  }
+  p a{
+    font-weight: 700;
+    text-decoration: none;
+    color: red;
+  }
+}
