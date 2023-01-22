@@ -1,0 +1,302 @@
+#contact {
+  background-color: #117eff;
+  position: relative;
+  .patokan {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    gap: 50px;
+    position: relative;
+    h1 {
+      text-align: center;
+      font-size: 80px;
+      font-weight: 800;
+      color: white;
+
+    }
+    form {
+      background-color: #117eff;
+      width: 1000px;
+      height: 50vh;
+      box-shadow: 0px 0px 15px 5px rgba(84, 84, 84, 0.2);
+      border-radius: 15px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+      gap: 20px;
+      span{
+        width: 100%;
+        display: grid;
+        place-content: center;
+        font-size: 24px;
+        font-weight: 400;
+        color: white;
+      }
+      .form{
+        width: 800px;
+        height: 300px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 30px;
+        input{
+          width: 350px;
+          height: 60px;
+          background: rgba(255, 255, 255, 0.2);
+          border-bottom: none;
+          border-radius: 5px;
+          padding: 20px;
+          color: white;
+          font: 16px;
+          caret-color: rgb(255, 255, 255);
+        }
+        ::placeholder{
+          color: rgb(255, 255, 255, .9);
+        }
+        textarea{
+          width: 800px;
+          height: 100px;
+          background: rgba(255, 255, 255, 0.2);
+          border-bottom: none;
+          border-radius: 5px;
+          padding: 20px;
+          color: white;
+          font: 16px;
+          resize: none;
+        }
+        button{
+          width: 200px;
+          height: 50px;
+          background: #FFFFFF;
+          border-radius: 5px;
+          border: none;
+          margin: auto;
+          transition: .3s;
+          span{
+            font-weight: 700;
+            font-size: 18px;
+            color: #117eff;
+            display: none;
+          }
+          img{
+            width: 30px;
+            margin: auto;
+            display: none;
+          }
+          .activeLoad{
+            display: flex;
+            align-items: center;
+          }
+        }
+        button:active{
+          transform: scale(.9);
+        }
+        textarea:active{
+          border: none;
+        }
+      }
+    }
+
+    footer {
+      width: 100%;
+      height: 150px;
+      display: grid;
+      justify-content: center;
+      padding: 20px;
+      img {
+        height: 40px;
+      }
+      .link {
+        display: flex;
+        justify-content: center;
+        .imgs {
+          padding: 10px;
+        }
+      }
+      h6 {
+        font-weight: 100;
+        font-size: 16px;
+        color: white;
+        font-weight: 400;
+        text-align: center;
+        a {
+          font-weight: 400;
+          color: #000000;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  .popup{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(77, 68, 68,.3);
+    display: none;
+    // place-content: center;
+    .SucsessMessage{
+      z-index: 99999;
+        width: 600px;
+        height: 300px;
+        border-radius: 15px;
+        background-color: white;
+        display: grid;
+        justify-content: center;
+        padding: 30px;
+        img{
+          width: 100px;
+          margin: auto;
+        }
+        span{
+          margin: auto;
+          font-size: 32px;
+          font-weight: 700;
+          color: #117eff;
+          
+        }
+        .yourName{
+          font-size: 18px;
+          font-weight: 400;
+          color: black;
+        }
+        button{
+          margin: auto;
+          width: 200px;
+          height: 50px;
+          border-radius: 5px;
+          background-color: #117eff;
+          color: white;
+          font-weight: 700;
+          border: none;
+          transition: .3s;
+        }
+        button:active{
+          transform: scale(.9);
+        }
+    }
+  }
+  
+  .sucssesActive{
+    display: grid;
+    place-content: center;
+  }
+}
+
+button{
+  cursor: pointer;
+}
+
+
+
+
+
+
+@media screen and (max-height: 800px) {
+  #contact {
+    .patokan {
+      gap: 20px;
+      h1{
+        margin-top: 12vh;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1060px) {
+  #contact {
+    .patokan {
+      form {
+        width: 90vw;
+        height: 549px;
+        
+        .form{
+          width: 80%;
+          height: 300px;
+          gap: 30px;
+          .name, .email{
+            width: 45%;
+          }
+          .message{
+            width: 100%;
+          }
+          input{
+            width: 100%;
+            height: 60px;
+            padding: 20px;
+            font: 30px;
+            color: red;
+          }
+          textarea{
+            width: 100%;
+            height: 100px;
+            padding: 20px;
+            font: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 700px) {
+  #contact {
+    .patokan {
+      h1{
+        font-size: 40px;
+      }
+      form {
+        width: 90vw;
+        height: 100%;
+        span{
+          font-size: 18px;
+        }
+        .form{
+          width: 100%;
+          height: 300px;
+          gap: 10px;
+
+          .name, .email{
+            width: 100%;
+          }
+          .message{
+            width: 100%;
+          }
+          input{
+            width: 100%;
+            height: 50px;
+            padding: 20px;
+            font: 30px;
+            color: red;
+          }
+          textarea{
+            width: 100%;
+            height: 100px;
+            padding: 20px;
+            font: 16px;
+          }
+          button{
+            width: 100%;
+          }
+        }
+      }
+      footer{
+        img{
+          height: 30px;
+        }
+      }
+    }
+    .popup{
+      .SucsessMessage{
+          width: 90vw;
+      }
+    }
+  }
+}
+
+
+
+
+

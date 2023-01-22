@@ -1,0 +1,842 @@
+#home {
+  height: 100vh;
+}
+#home .patokan {
+  display: grid;
+  grid-template-rows: 2fr 10%;
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas: "welcome logo" "down down";
+  width: 75%;
+  gap: 50px;
+}
+#home .patokan .welcome {
+  grid-area: welcome;
+  display: grid;
+  align-content: center;
+}
+#home .patokan .welcome h1 {
+  font-weight: 800;
+  font-size: 80px;
+}
+#home .patokan .welcome h1 span {
+  color: #117EFF;
+}
+#home .patokan .welcome h3 {
+  font-weight: 800;
+  font-size: 30px;
+}
+#home .patokan .logo {
+  grid-area: logo;
+  display: grid;
+  justify-content: end;
+  align-items: center;
+}
+#home .patokan .logo svg {
+  width: 430px;
+}
+
+@media screen and (max-width: 1450px) {
+  #home .patokan {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 1300px) {
+  #home .patokan .welcome h1 {
+    font-size: 60px;
+  }
+  #home .patokan .welcome h3 {
+    font-size: 20px;
+  }
+  #home .patokan .logo svg {
+    width: 300px;
+  }
+}
+@media screen and (max-width: 900px) {
+  #home .patokan {
+    margin-top: 100px;
+    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: "welcome " "logo" "down";
+  }
+  #home .patokan .logo {
+    display: grid;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 700px) {
+  #home .patokan {
+    margin-top: 60px;
+  }
+  #home .patokan .welcome h1 {
+    font-size: 30px;
+  }
+  #home .patokan .welcome h3 {
+    font-size: 16px;
+  }
+  #home .patokan .logo svg {
+    width: 200px;
+  }
+}
+header {
+  height: 100px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  z-index: 999;
+}
+header nav {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 75%;
+}
+header nav ul {
+  width: 540px;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: bold;
+}
+header nav ul a {
+  text-decoration: none;
+  color: black;
+  display: inline-block;
+}
+header nav ul a:hover,
+header nav ul .active {
+  color: #117eff;
+}
+
+.colorNav {
+  transition: 0.2s;
+  background-color: #117eff;
+}
+.colorNav a {
+  color: black;
+}
+.colorNav a:hover,
+.colorNav .active {
+  color: white;
+}
+
+.menu {
+  width: 32px;
+  height: 25px;
+  display: none;
+  justify-content: space-between;
+  flex-direction: column;
+  position: relative;
+}
+.menu span {
+  background-color: black;
+  height: 5px;
+  border-radius: 3px;
+  transition: 0.3s;
+  display: flex;
+}
+.menu input {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  opacity: 0;
+  z-index: 1;
+}
+
+.menu input ~ span:nth-child(2) {
+  transform-origin: 0 0;
+}
+
+.menu input ~ span:last-child {
+  transform-origin: 0 10%;
+}
+
+.menu input:checked ~ span:nth-child(2) {
+  transform: rotate(45deg) translate(-2px, -8px);
+}
+
+.menu input:checked ~ span:last-child {
+  transform: rotate(-45deg) translate(4px, -2px);
+}
+
+.menu input:checked ~ span:nth-child(3) {
+  transform: scale(0);
+}
+
+@media screen and (max-width: 1450px) {
+  header nav {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 900px) {
+  header nav {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 700px) {
+  header {
+    height: 60px;
+  }
+  header nav {
+    justify-content: end;
+  }
+  header nav .menu {
+    display: flex;
+  }
+  header nav ul {
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    justify-content: space-evenly;
+    background-color: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    transform: translateX(100%);
+    transition: 0.5s;
+    padding-left: 30px;
+  }
+  header nav ul li {
+    justify-content: center;
+    align-items: center;
+  }
+  header nav ul.slide {
+    transform: translateX(50%);
+  }
+  .colorNav {
+    transition: 0.2s;
+    background-color: #117eff;
+  }
+  .colorNav a {
+    color: black;
+  }
+  .colorNav a:hover,
+.colorNav .active {
+    color: #117eff;
+  }
+}
+.down {
+  grid-area: down;
+  display: flex;
+  justify-content: center;
+}
+
+.down path {
+  animation: arrow 2s infinite;
+  -webkit-animation: arrow 2s infinite;
+}
+
+@keyframes arrow {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes arrow /*Safari and Chrome*/ {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.down path.a1 {
+  animation-delay: -0.5s;
+  -webkit-animation-delay: -0.5s;
+}
+
+.down path.a2 {
+  animation-delay: -0.25s;
+  -webkit-animation-delay: -0.25s;
+}
+
+.down path.a3 {
+  animation-delay: 0s;
+  -webkit-animation-delay: 0s;
+}
+
+#portfolio {
+  background-color: #117eff;
+  width: 100vw;
+  color: white;
+  display: grid;
+  justify-content: center;
+}
+#portfolio h1 {
+  margin-top: 110px;
+  text-align: center;
+  font-size: 80px;
+  font-weight: 800;
+}
+#portfolio .cards {
+  height: 600px;
+}
+#portfolio .cards .card {
+  width: 500px;
+  height: 420px;
+  background-color: #117eff;
+  box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  padding: 20px;
+  display: grid;
+  transition: 0.3s;
+}
+#portfolio .cards .card .cardImg {
+  height: 258px;
+  width: 460px;
+  background: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+#portfolio .cards .card .cardImg img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  transform: scale(1.05);
+}
+#portfolio .cards .card h2 {
+  font-size: 20px;
+}
+#portfolio .cards .card .button {
+  display: grid;
+  place-items: center;
+  grid-template-columns: 10% 1fr;
+  gap: 20px;
+}
+#portfolio .cards .card .button button {
+  transition: 0.3s;
+}
+#portfolio .cards .card .button a {
+  pointer-events: none;
+}
+#portfolio .cards .card .button .github {
+  padding: 5px;
+  background-color: white;
+  width: 60px;
+  height: 60px;
+  border: none;
+  border-radius: 10px;
+}
+#portfolio .cards .card .button .liveView {
+  background-color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: -webkit-grab;
+  cursor: grab;
+  width: 100%;
+}
+#portfolio .cards .card .button .liveView a {
+  display: inline-block;
+  color: #117eff;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  display: block;
+  height: 60px;
+  line-height: 60px;
+}
+#portfolio .cards .card .button button:active {
+  transform: scale(0.9);
+}
+
+#portfolio .cards {
+  position: relative;
+}
+#portfolio .cards .owl-item.active.center .card {
+  transform: scale(1.1);
+}
+#portfolio .cards .owl-item.active.center .card .button a {
+  pointer-events: auto;
+}
+#portfolio .cards .owl-item.active.center .card .button .liveView, #portfolio .cards .owl-item.active.center .card .button .github {
+  cursor: pointer;
+}
+
+.owl-stage-outer {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  max-width: 1720px;
+  display: grid;
+  align-items: center;
+}
+.owl-stage-outer .owl-stage {
+  cursor: -webkit-grab;
+  cursor: grab;
+  display: flex;
+  justify-content: center;
+}
+.owl-stage-outer .owl-stage .owl-item {
+  width: 565px !important;
+  display: flex;
+  justify-content: center;
+}
+.owl-stage-outer .owl-stage .owl-stage:active {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+.owl-carousel span {
+  width: 10px;
+  height: 10px;
+  margin: 5px 15px !important;
+  background: rgb(255, 255, 255) !important;
+  display: block;
+  border-radius: 30px;
+  opacity: 0.5;
+}
+
+.owl-carousel .active span {
+  opacity: 1;
+  transform: scale(1.3);
+}
+
+@media screen and (max-width: 700px) {
+  #portfolio h1 {
+    margin-top: 80px;
+    font-size: 40px;
+  }
+  #portfolio .cards .card {
+    width: 300px;
+    height: 280px;
+    border-radius: 6px;
+  }
+  #portfolio .cards .card .cardImg {
+    width: 100%;
+    height: 155px;
+    border-radius: 6px;
+  }
+  #portfolio .cards .card .button .github {
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+  }
+  #portfolio .cards .card .button .liveView {
+    border-radius: 6px;
+  }
+  #portfolio .cards .card .button .liveView a {
+    font-size: 16px;
+    height: 40px;
+    line-height: 40px;
+  }
+  #portfolio .cards .owl-stage-outer {
+    width: 900px;
+  }
+}
+#about .patokan {
+  display: grid;
+  gap: 100px;
+  align-items: space-between;
+  position: relative;
+  height: 700px;
+}
+#about .patokan h1 {
+  margin-top: 110px;
+  text-align: center;
+  height: 90px;
+  font-size: 80px;
+  font-weight: 800;
+}
+#about .patokan .skills {
+  align-content: center;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+}
+#about .patokan .skills .skill {
+  margin: 20px;
+  display: flex;
+  line-height: 90px;
+}
+#about .patokan .skills .skill img {
+  height: 90px;
+}
+#about .patokan .skills .skill span {
+  margin-left: 20px;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 1350px) {
+  #about .patokan {
+    width: 100vw;
+  }
+  #about .patokan h1 {
+    margin-top: 110px;
+    height: 90px;
+    font-size: 80px;
+  }
+  #about .patokan .skills {
+    gap: 20px;
+  }
+  #about .patokan .skills .programming {
+    gap: 20px;
+  }
+  #about .patokan .skills .programming .skill {
+    margin: 20px;
+    line-height: 50px;
+  }
+  #about .patokan .skills .programming .skill img {
+    height: 50px;
+  }
+  #about .patokan .skills .programming .skill span {
+    margin-left: 20px;
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  #about .patokan {
+    gap: 5;
+    align-content: center;
+    width: 90vw;
+  }
+  #about .patokan h1 {
+    margin-top: 80px;
+    font-size: 60px;
+  }
+  #about .patokan .skills {
+    gap: 10px;
+  }
+  #about .patokan .skills .skill {
+    line-height: 60px;
+  }
+  #about .patokan .skills .skill img {
+    height: 60px;
+  }
+  #about .patokan .skills .skill span {
+    margin-left: 8px;
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 700px) {
+  #about .patokan {
+    gap: 0;
+    align-content: center;
+    width: 100vw;
+  }
+  #about .patokan h1 {
+    margin-top: 80px;
+    font-size: 40px;
+  }
+  #about .patokan .skills {
+    gap: 0px;
+  }
+  #about .patokan .skills .skill {
+    line-height: 28px;
+  }
+  #about .patokan .skills .skill img {
+    height: 28px;
+  }
+  #about .patokan .skills .skill span {
+    margin-left: 8px;
+    font-size: 14px;
+  }
+}
+#contact {
+  background-color: #117eff;
+  position: relative;
+}
+#contact .patokan {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  gap: 50px;
+  position: relative;
+}
+#contact .patokan h1 {
+  text-align: center;
+  font-size: 80px;
+  font-weight: 800;
+  color: white;
+}
+#contact .patokan form {
+  background-color: #117eff;
+  width: 1000px;
+  height: 50vh;
+  box-shadow: 0px 0px 15px 5px rgba(84, 84, 84, 0.2);
+  border-radius: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  gap: 20px;
+}
+#contact .patokan form span {
+  width: 100%;
+  display: grid;
+  place-content: center;
+  font-size: 24px;
+  font-weight: 400;
+  color: white;
+}
+#contact .patokan form .form {
+  width: 800px;
+  height: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+#contact .patokan form .form input {
+  width: 350px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.2);
+  border-bottom: none;
+  border-radius: 5px;
+  padding: 20px;
+  color: white;
+  font: 16px;
+  caret-color: rgb(255, 255, 255);
+}
+#contact .patokan form .form ::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.9);
+}
+#contact .patokan form .form :-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.9);
+}
+#contact .patokan form .form ::placeholder {
+  color: rgba(255, 255, 255, 0.9);
+}
+#contact .patokan form .form textarea {
+  width: 800px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.2);
+  border-bottom: none;
+  border-radius: 5px;
+  padding: 20px;
+  color: white;
+  font: 16px;
+  resize: none;
+}
+#contact .patokan form .form button {
+  width: 200px;
+  height: 50px;
+  background: #FFFFFF;
+  border-radius: 5px;
+  border: none;
+  margin: auto;
+  transition: 0.3s;
+}
+#contact .patokan form .form button span {
+  font-weight: 700;
+  font-size: 18px;
+  color: #117eff;
+  display: none;
+}
+#contact .patokan form .form button img {
+  width: 30px;
+  margin: auto;
+  display: none;
+}
+#contact .patokan form .form button .activeLoad {
+  display: flex;
+  align-items: center;
+}
+#contact .patokan form .form button:active {
+  transform: scale(0.9);
+}
+#contact .patokan form .form textarea:active {
+  border: none;
+}
+#contact .patokan footer {
+  width: 100%;
+  height: 150px;
+  display: grid;
+  justify-content: center;
+  padding: 20px;
+}
+#contact .patokan footer img {
+  height: 40px;
+}
+#contact .patokan footer .link {
+  display: flex;
+  justify-content: center;
+}
+#contact .patokan footer .link .imgs {
+  padding: 10px;
+}
+#contact .patokan footer h6 {
+  font-weight: 100;
+  font-size: 16px;
+  color: white;
+  font-weight: 400;
+  text-align: center;
+}
+#contact .patokan footer h6 a {
+  font-weight: 400;
+  color: #000000;
+  font-size: 16px;
+}
+#contact .popup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(77, 68, 68, 0.3);
+  display: none;
+}
+#contact .popup .SucsessMessage {
+  z-index: 99999;
+  width: 600px;
+  height: 300px;
+  border-radius: 15px;
+  background-color: white;
+  display: grid;
+  justify-content: center;
+  padding: 30px;
+}
+#contact .popup .SucsessMessage img {
+  width: 100px;
+  margin: auto;
+}
+#contact .popup .SucsessMessage span {
+  margin: auto;
+  font-size: 32px;
+  font-weight: 700;
+  color: #117eff;
+}
+#contact .popup .SucsessMessage .yourName {
+  font-size: 18px;
+  font-weight: 400;
+  color: black;
+}
+#contact .popup .SucsessMessage button {
+  margin: auto;
+  width: 200px;
+  height: 50px;
+  border-radius: 5px;
+  background-color: #117eff;
+  color: white;
+  font-weight: 700;
+  border: none;
+  transition: 0.3s;
+}
+#contact .popup .SucsessMessage button:active {
+  transform: scale(0.9);
+}
+#contact .sucssesActive {
+  display: grid;
+  place-content: center;
+}
+
+button {
+  cursor: pointer;
+}
+
+@media screen and (max-height: 800px) {
+  #contact .patokan {
+    gap: 20px;
+  }
+  #contact .patokan h1 {
+    margin-top: 12vh;
+  }
+}
+@media screen and (max-width: 1060px) {
+  #contact .patokan form {
+    width: 90vw;
+    height: 549px;
+  }
+  #contact .patokan form .form {
+    width: 80%;
+    height: 300px;
+    gap: 30px;
+  }
+  #contact .patokan form .form .name, #contact .patokan form .form .email {
+    width: 45%;
+  }
+  #contact .patokan form .form .message {
+    width: 100%;
+  }
+  #contact .patokan form .form input {
+    width: 100%;
+    height: 60px;
+    padding: 20px;
+    font: 30px;
+    color: red;
+  }
+  #contact .patokan form .form textarea {
+    width: 100%;
+    height: 100px;
+    padding: 20px;
+    font: 16px;
+  }
+}
+@media screen and (max-width: 700px) {
+  #contact .patokan h1 {
+    font-size: 40px;
+  }
+  #contact .patokan form {
+    width: 90vw;
+    height: 100%;
+  }
+  #contact .patokan form span {
+    font-size: 18px;
+  }
+  #contact .patokan form .form {
+    width: 100%;
+    height: 300px;
+    gap: 10px;
+  }
+  #contact .patokan form .form .name, #contact .patokan form .form .email {
+    width: 100%;
+  }
+  #contact .patokan form .form .message {
+    width: 100%;
+  }
+  #contact .patokan form .form input {
+    width: 100%;
+    height: 50px;
+    padding: 20px;
+    font: 30px;
+    color: red;
+  }
+  #contact .patokan form .form textarea {
+    width: 100%;
+    height: 100px;
+    padding: 20px;
+    font: 16px;
+  }
+  #contact .patokan form .form button {
+    width: 100%;
+  }
+  #contact .patokan footer img {
+    height: 30px;
+  }
+  #contact .popup .SucsessMessage {
+    width: 90vw;
+  }
+}
+body {
+  position: relative;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.patokan {
+  width: 80vw;
+  height: 100%;
+  margin: auto;
+}
+
+.kursor-center {
+  left: 591px;
+}/*# sourceMappingURL=style.css.map */

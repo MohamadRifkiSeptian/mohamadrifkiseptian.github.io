@@ -1,0 +1,100 @@
+#home{
+  height: 100vh;
+  .patokan{
+    display: grid;
+    grid-template-rows: 2fr 10%;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: 'welcome logo' 'down down';
+    width: 75%;
+    gap: 50px;
+    .welcome{
+      grid-area: welcome;
+      display: grid;
+      align-content: center;
+      
+      h1{
+        font-weight: 800;
+        font-size: 80px;
+        span{
+          color: #117EFF;
+        }
+        
+      }
+      h3{
+        font-weight: 800;
+        font-size: 30px;
+      }
+    }
+    .logo{
+      grid-area: logo;
+      display: grid;
+      justify-content: end;
+      align-items: center;
+      svg{
+        width: 430px;
+      }
+    }
+    
+  }
+}
+
+@media screen and (max-width: 1450px){
+   #home{
+    .patokan{
+      width: 90%;
+    }
+   }
+}
+@media screen and (max-width: 1300px){
+   #home{
+     .patokan{
+      .welcome{
+        h1{
+          font-size: 60px;
+        }
+        h3{
+          font-size: 20px;
+        }
+      }
+      .logo{
+        svg{
+          width: 300px;
+        }
+      }
+    }
+   }
+}
+@media screen and (max-width: 900px){
+   #home{
+     .patokan{
+      margin-top: 100px;
+      grid-template-rows: 1fr 2fr 1fr;
+      grid-template-columns: 1fr;
+      grid-template-areas: 'welcome ' 'logo''down';
+      .logo{
+        display: grid;
+        justify-content: center;
+      }
+    }
+   }
+}
+@media screen and (max-width: 700px){
+  #home{
+    .patokan{
+      margin-top: 60px;
+     .welcome{
+       h1{
+         font-size: 30px;
+       }
+       h3{
+         font-size: 16px;
+       }
+     }
+     .logo{
+       svg{
+         width: 200px;
+       }
+     }
+   }
+  }
+}

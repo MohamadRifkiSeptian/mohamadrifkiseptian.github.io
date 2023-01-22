@@ -1,0 +1,148 @@
+header {
+  height: 100px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  z-index: 999;
+  nav {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    // background-color: white;
+    width: 75%;
+    ul {
+      width: 540px;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      font-size: 18px;
+      font-weight: bold;
+      a {
+        text-decoration: none;
+        color: black;
+        display: inline-block;
+      }
+      a:hover,
+      .active {
+        color: #117eff;
+      }
+    }
+  }
+}
+.colorNav {
+  transition: 0.2s;
+  background-color: #117eff;
+  a {
+    color: black;
+  }
+  a:hover,
+  .active {
+    color: white;
+  }
+}
+
+// hamnerger menu
+.menu {
+  width: 32px;
+  height: 25px;
+  display: none;
+  justify-content: space-between;
+  flex-direction: column;
+  position: relative;
+
+  span {
+    background-color: black;
+    height: 5px;
+    border-radius: 3px;
+    transition: 0.3s;
+    display: flex;
+  }
+  input {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    opacity: 0;
+    z-index: 1;
+  }
+}
+
+.menu input ~ span:nth-child(2) {
+  transform-origin: 0 0;
+}
+.menu input ~ span:last-child {
+  transform-origin: 0 10%;
+}
+.menu input:checked ~ span:nth-child(2) {
+  transform: rotate(45deg) translate(-2px, -8px);
+}
+.menu input:checked ~ span:last-child {
+  transform: rotate(-45deg) translate(4px, -2px);
+}
+.menu input:checked ~ span:nth-child(3) {
+  transform: scale(0);
+}
+
+@media screen and (max-width: 1450px) {
+  header {
+    nav {
+      width: 90%;
+    }
+  }
+}
+@media screen and (max-width: 1300px) {
+}
+@media screen and (max-width: 900px) {
+  header {
+    nav {
+      justify-content: center;
+    }
+  }
+}
+@media screen and (max-width: 700px) {
+  header {
+    height: 60px;
+    nav {
+      justify-content: end;
+      .menu {
+        display: flex;
+      }
+      ul {
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        justify-content: space-evenly;
+        background-color: white;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        width: 100%;
+        transform: translateX(100%);
+        transition: 0.5s;
+        padding-left: 30px;
+        li {
+          justify-content: center;
+          align-items: center;
+        }
+      }
+      ul.slide {
+        transform: translateX(50%);
+      }
+   
+    }
+  }
+  .colorNav {
+    transition: 0.2s;
+    background-color: #117eff;
+    a {
+      color: black;
+    }
+    a:hover,
+    .active {
+      color: #117eff;
+    }
+  }
+}

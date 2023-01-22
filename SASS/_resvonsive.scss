@@ -1,0 +1,43 @@
+// // satu
+
+// hanphone
+@media (max-width: 599px) {
+  @content;
+}
+
+// Tablet
+@media (min-width: 600px) {
+  @content;
+}
+
+// laptop
+@media (min-width: 900px) {
+  @content;
+}
+
+// destiop
+@media (min-width: 1200px) {
+  @content;
+}
+
+// // dua
+
+
+
+// hanphone
+@media screen and (max-width: 700px) {
+  @content;
+}
+
+// Tablet
+@media screen and (max-width: 900px) {
+  @content;
+}
+// laptop
+@media screen and (max-width: 1300px) {
+  @content;
+}
+// destiop
+@media screen and (max-width: 1450px) {
+  @content;
+}

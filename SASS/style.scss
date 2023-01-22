@@ -1,0 +1,26 @@
+@import 'home';
+@import 'header';
+@import 'downIcon';
+@import 'portfolio';
+@import 'about';
+@import 'contact';
+
+body{
+  position: relative;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.container{
+}
+.patokan{
+  width: 80vw;
+  height: 100%;
+  margin: auto;
+  // border: 1px solid black;
+}
+
+
+
+.kursor-center{
+  left: 591px;
+}
