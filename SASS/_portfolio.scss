@@ -55,7 +55,7 @@ $primeryColor: #117eff;
         button {
           transition: 0.3s;
         }
-        a{
+        a {
           pointer-events: none;
         }
         .github {
@@ -65,7 +65,7 @@ $primeryColor: #117eff;
           height: 60px;
           border: none;
           border-radius: 10px;
-            cursor: grab;
+          cursor: grab;
         }
         .liveView {
           background-color: white;
@@ -104,7 +104,8 @@ $primeryColor: #117eff;
             a {
               pointer-events: auto;
             }
-            .liveView, .github {
+            .liveView,
+            .github {
               cursor: pointer;
             }
           }
@@ -194,5 +195,3 @@ $primeryColor: #117eff;
     }
   }
 }
-
-

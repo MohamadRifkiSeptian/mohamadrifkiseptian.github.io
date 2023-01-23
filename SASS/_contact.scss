@@ -23,7 +23,7 @@
       justify-content: center;
       padding: 20px;
       gap: 20px;
-      span{
+      span {
         width: 100%;
         display: grid;
         place-content: center;
@@ -31,14 +31,14 @@
         font-weight: 400;
         color: white;
       }
-      .form{
+      .form {
         width: 800px;
         height: 300px;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         gap: 30px;
-        input{
+        input {
           width: 350px;
           height: 60px;
           background: rgba(255, 255, 255, 0.2);
@@ -49,10 +49,10 @@
           font: 16px;
           caret-color: rgb(255, 255, 255);
         }
-        ::placeholder{
-          color: rgb(255, 255, 255, .9);
+        ::placeholder {
+          color: rgb(255, 255, 255, 0.9);
         }
-        textarea{
+        textarea {
           width: 800px;
           height: 100px;
           background: rgba(255, 255, 255, 0.2);
@@ -63,34 +63,34 @@
           font: 16px;
           resize: none;
         }
-        button{
+        button {
           width: 200px;
           height: 50px;
-          background: #FFFFFF;
+          background: #ffffff;
           border-radius: 5px;
           border: none;
           margin: auto;
-          transition: .3s;
-          span{
+          transition: 0.3s;
+          span {
             font-weight: 700;
             font-size: 18px;
             color: #117eff;
             display: none;
           }
-          img{
+          img {
             width: 30px;
             margin: auto;
             display: none;
           }
-          .activeLoad{
+          .activeLoad {
             display: flex;
             align-items: center;
           }
         }
-        button:active{
-          transform: scale(.9);
+        button:active {
+          transform: scale(0.9);
         }
-        textarea:active{
+        textarea:active {
           border: none;
         }
       }
@@ -124,78 +124,72 @@
       }
     }
   }
-  .popup{
+  .popup {
     z-index: 9999;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(77, 68, 68,.3);
+    background-color: rgba(77, 68, 68, 0.3);
     display: none;
     // place-content: center;
-    .SucsessMessage{
-        width: 600px;
-        height: 300px;
-        border-radius: 15px;
-        background-color: white;
-        display: grid;
-        justify-content: center;
-        padding: 30px;
-        img{
-          width: 100px;
-          margin: auto;
-        }
-        span{
-          margin: auto;
-          font-size: 32px;
-          font-weight: 700;
-          color: #117eff;
-          text-align: center;
-          
-        }
-        .yourName{
-          font-size: 18px;
-          font-weight: 400;
-          color: black;
-        }
-        button{
-          margin: auto;
-          width: 200px;
-          height: 50px;
-          border-radius: 5px;
-          background-color: #117eff;
-          color: white;
-          font-weight: 700;
-          border: none;
-          transition: .3s;
-        }
-        button:active{
-          transform: scale(.9);
-        }
+    .SucsessMessage {
+      width: 600px;
+      height: 300px;
+      border-radius: 15px;
+      background-color: white;
+      display: grid;
+      justify-content: center;
+      padding: 30px;
+      img {
+        width: 100px;
+        margin: auto;
+      }
+      span {
+        margin: auto;
+        font-size: 32px;
+        font-weight: 700;
+        color: #117eff;
+        text-align: center;
+      }
+      .yourName {
+        font-size: 18px;
+        font-weight: 400;
+        color: black;
+      }
+      button {
+        margin: auto;
+        width: 200px;
+        height: 50px;
+        border-radius: 5px;
+        background-color: #117eff;
+        color: white;
+        font-weight: 700;
+        border: none;
+        transition: 0.3s;
+      }
+      button:active {
+        transform: scale(0.9);
+      }
     }
   }
-  
-  .sucssesActive{
+
+  .sucssesActive {
     display: grid;
     place-content: center;
   }
 }
 
-button{
+button {
   cursor: pointer;
 }
-
-
-
-
-
 
 @media screen and (max-height: 800px) {
   #contact {
     .patokan {
       gap: 20px;
-      h1{
+      h1 {
         margin-top: 12vh;
       }
     }
@@ -207,24 +201,25 @@ button{
       form {
         width: 90vw;
         height: 549px;
-        
-        .form{
+
+        .form {
           width: 80%;
           height: 300px;
           gap: 30px;
-          .name, .email{
+          .name,
+          .email {
             width: 45%;
           }
-          .message{
+          .message {
             width: 100%;
           }
-          input{
+          input {
             width: 100%;
             height: 60px;
             padding: 20px;
             font: 30px;
           }
-          textarea{
+          textarea {
             width: 100%;
             height: 100px;
             padding: 20px;
@@ -235,66 +230,61 @@ button{
     }
   }
 }
-
 
 @media screen and (max-width: 700px) {
   #contact {
     .patokan {
       padding-top: 65px;
       padding-bottom: 25px;
-      h1{
+      h1 {
         font-size: 40px;
         margin-top: 0;
       }
       form {
         width: 90vw;
         height: 100%;
-        span{
+        span {
           font-size: 18px;
         }
-        .form{
+        .form {
           width: 100%;
           height: 300px;
           gap: 10px;
 
-          .name, .email{
+          .name,
+          .email {
             width: 100%;
           }
-          .message{
+          .message {
             width: 100%;
           }
-          input{
+          input {
             width: 100%;
             height: 50px;
             padding: 20px;
             font: 30px;
           }
-          textarea{
+          textarea {
             width: 100%;
             height: 100px;
             padding: 20px;
             font: 16px;
           }
-          button{
+          button {
             width: 100%;
           }
         }
       }
-      footer{
-        img{
+      footer {
+        img {
           height: 30px;
         }
       }
     }
-    .popup{
-      .SucsessMessage{
-          width: 90vw;
+    .popup {
+      .SucsessMessage {
+        width: 90vw;
       }
     }
   }
 }
-
-
-
-
-

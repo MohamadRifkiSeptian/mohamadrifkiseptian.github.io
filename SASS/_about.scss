@@ -19,23 +19,22 @@
       flex-wrap: wrap;
       justify-content: center;
       gap: 50px;
-        .skill {
-          margin: 20px;
-          display: flex;
-          line-height: 90px;
-          img {
-            height: 90px;
-          }
-          span {
-            margin-left: 20px;
-            font-size: 32px;
-            font-weight: bold;
-          }
+      .skill {
+        margin: 20px;
+        display: flex;
+        line-height: 90px;
+        img {
+          height: 90px;
         }
+        span {
+          margin-left: 20px;
+          font-size: 32px;
+          font-weight: bold;
+        }
+      }
     }
   }
 }
-
 
 // laptop
 @media screen and (max-width: 1300px) {
@@ -83,17 +82,17 @@
         font-size: 60px;
       }
       .skills {
-          gap: 10px;
-          .skill {
-            line-height: 60px;
-            img {
-              height: 60px;
-            }
-            span {
-              margin-left: 8px;
-              font-size: 14px;
-            }
+        gap: 10px;
+        .skill {
+          line-height: 60px;
+          img {
+            height: 60px;
           }
+          span {
+            margin-left: 8px;
+            font-size: 14px;
+          }
+        }
       }
     }
   }
@@ -109,17 +108,17 @@
         font-size: 40px;
       }
       .skills {
-          gap: 0px;
-          .skill {
-            line-height: 28px;
-            img {
-              height: 28px;
-            }
-            span {
-              margin-left: 8px;
-              font-size: 14px;
-            }
+        gap: 0px;
+        .skill {
+          line-height: 28px;
+          img {
+            height: 28px;
           }
+          span {
+            margin-left: 8px;
+            font-size: 14px;
+          }
+        }
       }
     }
   }

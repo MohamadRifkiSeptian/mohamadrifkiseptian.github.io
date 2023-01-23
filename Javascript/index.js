@@ -53,7 +53,7 @@ homeHeight.style.height = `100vh`;
 window.onscroll = () => {
   section.forEach((sec) => {
     let top = window.scrollY;
-    let offset = sec.offsetTop -50;
+    let offset = sec.offsetTop - 50;
     let height = sec.offsetHeight;
     let id = sec.getAttribute("id");
     console.log(offset);
@@ -87,7 +87,7 @@ window.onscroll = () => {
       aboutHeight.style.height = `${vHeight[0]}px`;
       contactHeight.style.height = `${vHeight[0]}px`;
     }
-    if(innerHeight <= 600){
+    if (innerHeight <= 600) {
       portfolioHeight.style.height = `100%`;
       aboutHeight.style.height = `100%`;
       contactHeight.style.height = `100%`;
@@ -100,4 +100,3 @@ window.onscroll = () => {
 };
 
 // ////////////////////////////////////////////
-

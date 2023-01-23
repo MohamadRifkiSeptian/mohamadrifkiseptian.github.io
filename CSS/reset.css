@@ -1,35 +1,42 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Plus Jakarta Sans', sans-serif;
 }
-input, textarea{
+
+input,
+textarea {
   border: none;
   border-bottom: 2px solid #FFFFFF;
 }
+
 input:active,
 input:focus {
-outline: none;
+  outline: none;
 }
-body{
+
+body {
   overflow-x: hidden;
   cursor: url('/img/cursor.svg'), pointer;
 }
+
 textarea#story {
-  -moz-appearance:none;
-  outline:0px none transparent;
+  -moz-appearance: none;
+  outline: 0px none transparent;
 }
 
-textarea:focus, input:focus{
-    outline: 0;
+textarea:focus,
+input:focus {
+  outline: 0;
 }
 
 *:focus {
-    outline: 0;
+  outline: 0;
 }
+
 input:-webkit-autofill,
-input:-webkit-autofill:hover, 
+input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 textarea:-webkit-autofill,
 textarea:-webkit-autofill:hover,
@@ -41,7 +48,5 @@ select:-webkit-autofill:focus {
   -webkit-text-fill-color: rgb(255, 255, 255);
   -webkit-box-shadow: 0 0 0px 1000px rgba(0, 0, 0, 0) inset;
   transition: background-color 5000s ease-in-out 0s;
-  
+
 }
-
-

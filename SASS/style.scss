@@ -1,26 +1,24 @@
-@import 'home';
-@import 'header';
-@import 'downIcon';
-@import 'portfolio';
-@import 'about';
-@import 'contact';
+@import "home";
+@import "header";
+@import "downIcon";
+@import "portfolio";
+@import "about";
+@import "contact";
 
-body{
+body {
   position: relative;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif;
 }
 
-.container{
+.container {
 }
-.patokan{
+.patokan {
   width: 80vw;
   height: 100%;
   margin: auto;
   // border: 1px solid black;
 }
 
-
-
-.kursor-center{
+.kursor-center {
   left: 591px;
 }
