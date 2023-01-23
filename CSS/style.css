@@ -334,6 +334,8 @@ header nav ul .active {
   height: 60px;
   border: none;
   border-radius: 10px;
+  cursor: -webkit-grab;
+  cursor: grab;
 }
 #portfolio .cards .card .button .liveView {
   background-color: white;
