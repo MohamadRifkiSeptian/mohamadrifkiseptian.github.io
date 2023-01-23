@@ -79,13 +79,18 @@ window.onscroll = () => {
     const aboutHeight = document.querySelector("#about");
     const contactHeight = document.querySelector("#contact");
     let vHeight = [];
+    let innerHeight = window.innerHeight;
     if (top <= 400) {
       // tinggi background
-      let height = window.innerHeight;
-      vHeight.push(height);
+      vHeight.push(innerHeight);
       portfolioHeight.style.height = `${vHeight[0]}px`;
       aboutHeight.style.height = `${vHeight[0]}px`;
       contactHeight.style.height = `${vHeight[0]}px`;
+    }
+    if(innerHeight <= 600){
+      portfolioHeight.style.height = `100%`;
+      aboutHeight.style.height = `100%`;
+      contactHeight.style.height = `100%`;
     }
     if (top >= 300) {
       down.style.opacity = "0";
